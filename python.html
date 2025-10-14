@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Learn Python">
+<meta name="author" content="Mostafa Ashraf Eldawoshy">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CODING SCHOOL - Learn Python</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #3b82f6, #9333ea);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .video-section {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    width: 90%;
+    margin: auto;
+  }
+
+  .video-container {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .video-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popup iframe {
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+  }
+
+  .popup.active {
+    display: flex;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: auto;
+    padding: 1rem;
+    background: rgba(0,0,0,0.3);
+    font-size: 1rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Learn Python Programming</h1>
+  <p>Click on any video to watch it in fullscreen mode!</p>
+</header>
+
+<section class="video-section">
+  <div class="video-container" data-video="https://www.youtube.com/embed/_uQrJ0TkZlc">
+    <iframe src="https://www.youtube.com/embed/_uQrJ0TkZlc" title="Python Full Course - Programming with Mosh"></iframe>
+  </div>
+  <div class="video-container" data-video="https://www.youtube.com/embed/rfscVS0vtbw">
+    <iframe src="https://www.youtube.com/embed/rfscVS0vtbw" title="Python for Beginners - freeCodeCamp"></iframe>
+  </div>
+  <div class="video-container" data-video="https://www.youtube.com/embed/kqtD5dpn9C8">
+    <iframe src="https://www.youtube.com/embed/kqtD5dpn9C8" title="Python Tutorial - Bro Code"></iframe>
+  </div>
+  <div class="video-container" data-video="https://www.youtube.com/embed/8DvywoWv6fI">
+    <iframe src="https://www.youtube.com/embed/8DvywoWv6fI" title="Python Crash Course - Traversy Media"></iframe>
+  </div>
+  <div class="video-container" data-video="https://www.youtube.com/embed/XKHEtdqhLK8">
+    <iframe src="https://www.youtube.com/embed/XKHEtdqhLK8" title="Python Tutorial for Beginners - Tech With Tim"></iframe>
+  </div>
+  <div class="video-container" data-video="https://www.youtube.com/embed/f79MRyMsjrQ">
+    <iframe src="https://www.youtube.com/embed/f79MRyMsjrQ" title="Python Course - Edureka"></iframe>
+  </div>
+</section>
+
+<div class="popup" id="popup">
+  <span class="close-btn" id="closeBtn">&times;</span>
+  <iframe id="popupFrame" src="" allowfullscreen></iframe>
+</div>
+
+<footer>
+  <p>Created by <strong>Mahmoud Mostafa Hamza-Mostafa Ashraf Eldawoshy</strong></p>
+</footer>
+
+<script>
+  const popup = document.getElementById("popup");
+  const popupFrame = document.getElementById("popupFrame");
+  const closeBtn = document.getElementById("closeBtn");
+
+  document.querySelectorAll(".video-container").forEach(container => {
+    container.addEventListener("click", () => {
+      const videoURL = container.getAttribute("data-video");
+      popupFrame.src = videoURL + "?autoplay=1";
+      popup.classList.add("active");
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popup.classList.remove("active");
+    popupFrame.src = "";
+  });
+
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      popup.classList.remove("active");
+      popupFrame.src = "";
+    }
+  });
+</script>
+
+</body>
+</html>

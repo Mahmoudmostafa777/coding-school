@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coding School</title>
+<meta name="description" content=" - Learn Programming Easily">
+<meta name="keywords" content="coding school, learn programming, HTML, CSS, JavaScript, C++, Python, React, SQL, Kotlin, PHP, Java">
+<meta name="author" content="Mahmoud Mostafa Hamza">
+
+<style>
+  /* ====== Reset & General ====== */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Cairo", "Poppins", sans-serif;
+  }
+
+  body {
+    background: linear-gradient(135deg, #6d28d9, #2563eb);
+    color: #fff;
+    line-height: 1.6;
+  }
+
+  header {
+    background: rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 20px;
+    backdrop-filter: blur(6px);
+  }
+
+  header h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: rgba(255,255,255,0.1);
+    padding: 10px;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 8px 15px;
+    padding: 8px 15px;
+    border-radius: 25px;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    background: rgba(255,255,255,0.2);
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 30px;
+  }
+
+  .card {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  }
+
+  .card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 10px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.2);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.5rem; }
+    nav a { font-size: 0.9rem; padding: 6px 10px; }
+  }
+</style>
+</head>
+
+<body>
+
+  <header>
+    <h1> Coding School </h1>
+    <p>  Learn programming easily!</p>
+  </header>
+
+  <nav>
+    <a href="#html">HTML</a>
+    <a href="#css">CSS</a>
+    <a href="#js">JavaScript</a>
+    <a href="#cpp">C++</a>
+    <a href="#python">Python</a>
+    <a href="#react">React</a>
+    <a href="#sql">SQL</a>
+    <a href="#kotlin">Kotlin</a>
+    <a href="#php">PHP</a>
+    <a href="#java">Java</a>
+  </nav>
+
+  <main class="content">
+
+    <div class="card" id="html">
+      <a href="html 1.html"><img src="htm1.jpg" alt="HTML"></a>
+      <h2>Learn HTML </h2>
+    </div>
+
+    <div class="card" id="css">
+      <a href="css1.html"><img src="cs1.jpg" alt="CSS"></a>
+      <h2>Learn CSS —  CSS</h2>
+    </div>
+
+    <div class="card" id="js">
+      <a href="java script.html"><img src="java.jpg" alt="JavaScript"></a>
+      <h2>Learn JavaScript  </h2>
+    </div>
+
+    <div class="card" id="cpp">
+      <a href="c++.html"><img src="c++.jpg" alt="C++"></a>
+      <h2>Learn C++ </h2>
+    </div>
+
+    <div class="card" id="python">
+      <a href="python.html"><img src="122.jpg" alt="Python"></a>
+      <h2>Learn Python  </h2>
+    </div>
+
+    <div class="card" id="react">
+      <a href="react.html"><img src="rectt.png" alt="React"></a>
+      <h2>Learn React </h2>
+    </div>
+
+    <div class="card" id="sql">
+      <a href="sql.html"><img src="sql.png" alt="SQL"></a>
+      <h2>Learn SQL </h2>
+    </div>
+
+    <div class="card" id="kotlin">
+      <a href="kotlin.html"><img src="kott.jpg" alt="Kotlin"></a>
+      <h2>Learn Kotlin</h2>
+    </div>
+
+    <div class="card" id="php">
+      <a href="php.html"><img src="ph.jpg" alt="PHP"></a>
+      <h2>Learn PHP </h2>
+    </div>
+
+    <div class="card" id="java">
+      <a href="javaaa.html"><img src="jav.jpg" alt="Java"></a>
+      <h2>Learn Java </h2>
+    </div>
+
+  </main>
+
+  <footer>
+    © 2025 Coding School | Mahmoud Mostafa Hamza_
+Mostafa Ashraf El_ Doushe
+  </footer>
+
+</body>
+</html>
